@@ -44,10 +44,12 @@ $S = function (el, arg) {
 
 // Image to lua code
 function clear_me() {
-	var img_info = Sizzle('#content .nospace')[0];
-	var img_help = Sizzle('#content .help')[0];
+	var img_info = $('img_info');
+	var img_help = $('img_help');
+	var img_draw = $('img_draw');
 	$S(img_info, { 'display': 'none' });
 	$S(img_help, { 'display': 'none' });
+	$S(img_draw, { 'display': 'none' });
 
 	var code_container = $('code_container');
 	$S(code_container, { 'display': 'none' });
@@ -74,9 +76,10 @@ function do_it() {
 	var canvas = $('temp_canvas');
 	var img = $('temp_img');
 	var include_alpha = $('include_alpha').checked;
-	var img_info = Sizzle('#content .nospace')[0];
-	var img_help = Sizzle('#content .help')[0];
-	var loading = Sizzle('#content .loading')[0];
+	var img_info = $('img_info');
+	var img_help = $('img_help');
+	var img_draw = $('img_draw');
+	var loading = $('loading');
 	$S(img_info, { 'display': 'none' });
 	$S(img_help, { 'display': 'none' });
 	$S(loading, { 'display': 'block' });
@@ -216,11 +219,12 @@ function do_it() {
 				console.log('str3: ' + str_3.length);
 
 				var draw_image = $('draw_image');
-				draw_image.value = 'this:draw_sprite(0, 0, 0, 5, 5, base_x, base_y, base_x+img_width, base_y+img_height)';
+				draw_image.value = 'function step()\n\tthis:draw_sprite(0, 0, 0, 5, 5, base_x, base_y, base_x+img_width, base_y+img_height)\nend';
 
 				$S(code_container, { 'display': 'block' });
 				$S(img_info, { 'display': 'block' });
 				$S(img_help, { 'display': 'block' });
+				$S(img_draw, { 'display': 'block' });
 				$S(loading, { 'display': 'none' });
 			}
 		} else {

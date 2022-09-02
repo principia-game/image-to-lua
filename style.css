@@ -6,15 +6,23 @@ body {
 	font-size: 0.9em;
 	margin: auto;
 	max-width: 1000px;
-	padding-bottom: 30px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 20px 10px;
 }
 
 a {
+	color: #ffff00;
 	text-decoration: none;
 }
 
+hr {
+	border-top: 1px solid #bbb;
+	border-bottom: 0;
+}
+
+.desc {
+	font-weight: bold;
+	margin: 7px;
+}
 .desc input {
 	padding: 1px 3px;
 }
@@ -44,8 +52,9 @@ textarea.code {
 	height: 200px;
 }
 
-textarea.code.short {
-	height: 50px;
+textarea.code.wide {
+	width: 85%;
+	height: 60px;
 }
 
 textarea, input[type=text], input[type=password] {
