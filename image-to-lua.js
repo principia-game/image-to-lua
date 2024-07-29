@@ -209,10 +209,10 @@ function do_it() {
 				}
 
 				code_1.value = best_str;
-				str_len_1.innerHTML = 'Variant #1 (Optimal code, ' + best_str_len + ' chars)';
+				str_len_1.innerHTML = 'Variant #1 (Raw pixel data, ' + best_str_len + ' chars)';
 
 				code_2.value = str_3;
-				str_len_2.innerHTML = 'Variant #2 (Sub-optimal code, ' + str_3.length + ' chars)';
+				str_len_2.innerHTML = 'Variant #2 (Indexed palette, ' + str_3.length + ' chars)';
 
 				console.log('str1: ' + str_1.length);
 				console.log('str2: ' + str_2.length);
