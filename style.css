@@ -3,53 +3,45 @@ body {
 	background-color: #0F0F0F;
 	color: white;
 	font-family: "Roboto", "Arial", sans-serif;
-	font-size: 0.9em;
+	font-size: 11.75pt;
 	margin: auto;
-	max-width: 1000px;
-	padding: 20px 10px;
+	max-width: 1280px;
+	padding: 20px 10px 200px;
 }
 
 a {
-	color: #ffff00;
+	color: #62aafc;
 	text-decoration: none;
 }
+a:hover { text-decoration: underline; }
+
+p { line-height: 2; }
 
 hr {
 	border-top: 1px solid #bbb;
 	border-bottom: 0;
 }
 
-.desc {
-	font-weight: bold;
-	margin: 7px;
-}
-.desc input {
-	padding: 1px 3px;
+.desc { font-weight: bold; }
+
+@media only screen and (min-width: 1024px) {
+	.two-columns {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.two-columns div {
+		width: 95%;
+	}
 }
 
-.ns {
-	padding: 0;
-	margin: 0;
+textarea {
+	outline: none;
 }
-
-div.nospace p {
-	margin: 0;
-}
-
-div.half_half p {
-	display: inline-block;
-	width: 49%;
-	margin: 0 0.2em;
-}
-
-div.nospace p {
-	margin: 0;
-}
-
 
 textarea.code {
-	width: 48%;
-	height: 200px;
+	width: 95%;
+	height: 250px;
 }
 
 textarea.code.wide {
@@ -58,7 +50,16 @@ textarea.code.wide {
 }
 
 textarea, input[type=text], input[type=password] {
-	background-color: #0f0f0f;
-	border: 2px solid #aaa;
+	background-color: #111;
+	border: 1px solid #444;
 	color: white;
+	padding: 5px;
+}
+
+button {
+	font-size: 12pt;
+	border: 1px solid #444;
+	background-color: #111;
+	color: white;
+	padding: 5px 15px;
 }
