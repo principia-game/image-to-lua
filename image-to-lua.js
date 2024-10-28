@@ -1,7 +1,7 @@
 
 $     = function (el) {	return document.getElementById(el); }
-$hide = function (el) { el.display = 'none'; };
-$show = function (el) { el.display = 'block'; };
+$hide = function (el) { el.style.display = 'none'; };
+$show = function (el) { el.style.display = 'block'; };
 
 $('init_code_1').value = `function init()
 	this:init_draw(img_width, img_height)
